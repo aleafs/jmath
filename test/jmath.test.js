@@ -25,6 +25,12 @@ describe('jmath interface', function () {
   });
   /* }}} */
 
+  /* {{{ should_vector_dot_works_fine() */
+  it('should_vector_dot_works_fine', function () {
+    jmath.dot([1, 3, 2], [9, 8]).should.eql(33);
+  });
+  /* }}} */
+
   /* {{{ should_linear_regression_works_fine() */
   it('should_linear_regression_works_fine', function () {
     jmath.linearRegression([0, 1, 2], [1, 3, 5]).should.eql([2, 1]);
