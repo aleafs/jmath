@@ -4,6 +4,7 @@
 "use strict";
 
 require('should');
+
 var jmath = require(__dirname + '/../');
 
 describe('jmath interface', function () {
@@ -33,12 +34,19 @@ describe('jmath interface', function () {
 
   /* {{{ should_linear_regression_works_fine() */
   it('should_linear_regression_works_fine', function () {
-    jmath.linearRegression([0, 1, 2], [1, 3, 5]).should.eql([2, 1]);
+    jmath.linearRegression([0, 1, 2], [1, 3, 5]).should.eql([2, 1, 0]);
     try {
       jmath.linearRegression([0, 1], [2]);
       (true).should.eql(false);
     } catch (e) {
       e.message.should.include('ArraySizeNotEqual');
+    }
+
+    try {
+      jmath.linearRegression([12], [13]);
+      (true).should.eql(false);
+    } catch (e) {
+      e.message.should.include('ArraySizeTooSmall');
     }
   });
   /* }}} */
