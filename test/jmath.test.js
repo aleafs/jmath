@@ -1,16 +1,25 @@
 /* vim: set expandtab tabstop=2 shiftwidth=2 foldmethod=marker: */
+/* jshint immed: false */
 
 "use strict";
 
-var should = require('should');
+require('should');
 var jmath = require(__dirname + '/../');
 
-describe ('jmath interface', function () {
+describe('jmath interface', function () {
 
-  it ('should_array_sum_works_fine', function () {
+  /* {{{ should_array_sum_avg_works_fine() */
+  it('should_array_sum_avg_works_fine', function () {
     jmath.sum([1, 2, 3]).should.eql(6);
     jmath.sum([]).should.eql(0);
+    (function () {
+      jmath.sum('a');
+    }).should.throwError('ArrayRequired');
+
+    jmath.avg([]).should.eql(0);
+    jmath.avg([1, 2, 3]).should.eql(2);
   });
+  /* }}} */
 
 });
 
