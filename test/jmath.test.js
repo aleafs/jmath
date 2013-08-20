@@ -21,5 +21,9 @@ describe('jmath interface', function () {
   });
   /* }}} */
 
+  it('should_linear_regression_works_fine', function () {
+    jmath.linearRegression([0, 1, 2], [1, 3, 5]).should.eql([2, 1]);
+  });
+
 });
 
