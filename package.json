@@ -1,12 +1,16 @@
 {
   "name": "jmath",
-  "version": "0.0.0",
+  "description": "some useful math function for Node.js",
+  "keywords": [ "math" ],
+  "version": "0.0.1",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
+  "repository": { 
+    "type": "git", 
+    "url": "git@github.com:aleafs/jmath.git"
+  },
+  "homepage": "https://github.com/aleafs/jmath",
   "contributors": [
   ],
-  "homepage": "http://gitlab.taobao.ali.com/mosad/skynet",
-  "description": "mosad develop sdk",
-  "keywords": [ "mosad", "develop", "sdk" ],
   "dependencies": {
   },
   "engines": {
@@ -23,11 +27,11 @@
   "scripts": {
     "main"  : "index.js",
     "test"  : "make test",
-    "blanket": { 
+    "blanket": {
       "pattern": ["jmath/lib"]
     },
-    "travis-cov": { 
-      "threshold": 93
+    "travis-cov": {
+      "threshold": 98
     }
   }
 }
