@@ -1,0 +1,33 @@
+{
+  "name": "jmath",
+  "version": "0.0.0",
+  "author": "Aleafs Zhang (zhangxc83@gmail.com)",
+  "contributors": [
+  ],
+  "homepage": "http://gitlab.taobao.ali.com/mosad/skynet",
+  "description": "mosad develop sdk",
+  "keywords": [ "mosad", "develop", "sdk" ],
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=0.8.14"
+  },
+  "devDependencies": {
+    "should"  : ">=0.6.3",
+    "mocha"   : ">=1.0.3",
+    "blanket": "*",
+    "travis-cov": "*",
+    "jshint" : "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "scripts": {
+    "main"  : "index.js",
+    "test"  : "make test",
+    "blanket": { 
+      "pattern": ["jmath/lib"]
+    },
+    "travis-cov": { 
+      "threshold": 93
+    }
+  }
+}
