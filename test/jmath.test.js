@@ -43,6 +43,7 @@ describe('jmath interface', function () {
     }
 
     jmath.linearRegression([12], [13]).should.eql([0, 13, 0]);
+    jmath.linearRegression([12, 0], [13, 1]).should.eql([1, 1, 0]);
   });
   /* }}} */
 
