@@ -42,12 +42,7 @@ describe('jmath interface', function () {
       e.message.should.include('ArraySizeNotEqual');
     }
 
-    try {
-      jmath.linearRegression([12], [13]);
-      (true).should.eql(false);
-    } catch (e) {
-      e.message.should.include('ArraySizeTooSmall');
-    }
+    jmath.linearRegression([12], [13]).should.eql([0, 13, 0]);
   });
   /* }}} */
 
