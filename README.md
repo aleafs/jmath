@@ -5,6 +5,18 @@
 
 `jmath`
 
+## API
+
+* `sum`: 
+
+* `avg`:
+
+* `dot`:
+
+* `linearRegression`:
+
+* `linearRegression2`:
+
 ## License
 
 MIT
