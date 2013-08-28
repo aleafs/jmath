@@ -34,16 +34,19 @@ describe('jmath interface', function () {
 
   /* {{{ should_linear_regression_works_fine() */
   it('should_linear_regression_works_fine', function () {
-    jmath.linearRegression([0, 1, 2], [1, 3, 5]).should.eql([2, 1, 0]);
+    jmath.linearRegression([0, 1, 2, 5], [2, 3, 4, 8]).should.eql([
+      1.2142857142857142, 1.821428571428572, 0.18898223650461338
+    ]);
+    jmath.linearRegression2([0, 1, 2], [1, 3, 5]).should.eql([2, 1, 0]);
     try {
-      jmath.linearRegression([0, 1], [2]);
+      jmath.linearRegression2([0, 1], [2]);
       (true).should.eql(false);
     } catch (e) {
       e.message.should.include('ArraySizeNotEqual');
     }
 
-    jmath.linearRegression([12], [13]).should.eql([0, 13, 0]);
-    jmath.linearRegression([12, 0], [13, 1]).should.eql([1, 1, 0]);
+    jmath.linearRegression2([12], [13]).should.eql([0, 13, 0]);
+    jmath.linearRegression2([12, 0], [13, 1]).should.eql([1, 1, 0]);
   });
   /* }}} */
 
