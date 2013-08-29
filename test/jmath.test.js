@@ -26,6 +26,12 @@ describe('jmath interface', function () {
   });
   /* }}} */
 
+  /* {{{ should_denoise_works_fine() */
+  it('should_denoise_works_fine', function () {
+    jmath.denoise([7, 7, 3, 9], [4, 3, 12, 12]).should.eql([[7, 9], [4, 12]]);
+  });
+  /* }}} */
+
   /* {{{ should_vector_dot_works_fine() */
   it('should_vector_dot_works_fine', function () {
     jmath.dot([1, 3, 2], [9, 8]).should.eql(33);
