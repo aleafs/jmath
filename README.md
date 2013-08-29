@@ -13,6 +13,8 @@
 
 * `dot`:
 
+* `denoise`:
+
 * `linearRegression`:
 
 * `linearRegression2`:
