@@ -2,7 +2,7 @@
   "name": "jmath",
   "description": "some useful math function for Node.js",
   "keywords": [ "math" ],
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
   "repository": { 
     "type": "git", 
@@ -32,7 +32,7 @@
       "pattern": ["jmath/lib"]
     },
     "travis-cov": {
-      "threshold": 98
+      "threshold": 95
     }
   }
 }
